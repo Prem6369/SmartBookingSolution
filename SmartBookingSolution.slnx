@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="BuildingBlocks/Common/Common.csproj" />
+    <Project Path="BuildingBlocks/Contracts/Contracts.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Messaging/Messaging.csproj" />
+    <Project Path="Infrastructure/Persistence/Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Services/">
+    <Project Path="Services/AnalyticsService/AnalyticsService.csproj" />
+    <Project Path="Services/BookingService/BookingService.csproj" />
+    <Project Path="Services/NotificationService/NotificationService.csproj" />
+  </Folder>
+  <Project Path="ApiGateway/ApiGateway.csproj" />
+</Solution>
