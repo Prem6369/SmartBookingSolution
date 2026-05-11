@@ -1,0 +1,13 @@
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/bin/Debug/net10.0/Messaging.deps.json
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/bin/Debug/net10.0/Messaging.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/bin/Debug/net10.0/Messaging.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.csproj.AssemblyReference.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.GeneratedMSBuildEditorConfig.editorconfig
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.AssemblyInfoInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.AssemblyInfo.cs
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.csproj.CoreCompileInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.sourcelink.json
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/refint/Messaging.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/Messaging.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/obj/Debug/net10.0/ref/Messaging.dll

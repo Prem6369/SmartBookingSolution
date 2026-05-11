@@ -1,0 +1,12 @@
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/bin/Debug/net10.0/Contracts.deps.json
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/bin/Debug/net10.0/Contracts.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/bin/Debug/net10.0/Contracts.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.AssemblyInfoInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.AssemblyInfo.cs
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.csproj.CoreCompileInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.sourcelink.json
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/refint/Contracts.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/Contracts.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Contracts/obj/Debug/net10.0/ref/Contracts.dll

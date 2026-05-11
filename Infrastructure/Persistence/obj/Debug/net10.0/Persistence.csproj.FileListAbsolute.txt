@@ -1,0 +1,12 @@
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/bin/Debug/net10.0/Persistence.deps.json
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/bin/Debug/net10.0/Persistence.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/bin/Debug/net10.0/Persistence.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.AssemblyInfoInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.AssemblyInfo.cs
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.sourcelink.json
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/refint/Persistence.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/Persistence.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Persistence/obj/Debug/net10.0/ref/Persistence.dll

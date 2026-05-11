@@ -1,0 +1,12 @@
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/bin/Debug/net10.0/Common.deps.json
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/bin/Debug/net10.0/Common.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/bin/Debug/net10.0/Common.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.AssemblyInfoInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.AssemblyInfo.cs
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.csproj.CoreCompileInputs.cache
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.sourcelink.json
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/refint/Common.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/Common.pdb
+/Users/premkumark/source/netproject/SmartBookingSolution/BuildingBlocks/Common/obj/Debug/net10.0/ref/Common.dll
