@@ -19,27 +19,16 @@ public class BookingCreatedConsumer : BackgroundService
 
     private readonly IMongoCollection<NotificationLog> _logs;
 
-    public BookingCreatedConsumer(
-        IOptions<RabbitMqSettings> rabbitMqOptions,
-        IOptions<MongoDbSettings> mongoOptions,
-        IEmailService emailService)
+    public BookingCreatedConsumer(IOptions<RabbitMqSettings> rabbitMqOptions,IOptions<MongoDbSettings> mongoOptions,IEmailService emailService)
     {
         _rabbitMqSettings = rabbitMqOptions.Value;
-
         _emailService = emailService;
-
-        var mongoClient = new MongoClient(
-            mongoOptions.Value.ConnectionString);
-
-        var database = mongoClient.GetDatabase(
-            mongoOptions.Value.DatabaseName);
-
-        _logs = database.GetCollection<NotificationLog>(
-            mongoOptions.Value.CollectionName);
+        var mongoClient = new MongoClient(mongoOptions.Value.ConnectionString);
+        var database = mongoClient.GetDatabase(mongoOptions.Value.DatabaseName);
+        _logs = database.GetCollection<NotificationLog>(mongoOptions.Value.CollectionName);
     }
 
-    protected override async Task ExecuteAsync(
-        CancellationToken stoppingToken)
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         var factory = new ConnectionFactory
         {
@@ -47,9 +36,7 @@ public class BookingCreatedConsumer : BackgroundService
         };
 
         var connection = await factory.CreateConnectionAsync();
-
         var channel = await connection.CreateChannelAsync();
-
         await channel.QueueDeclareAsync(
             queue: _rabbitMqSettings.QueueName,
             durable: true,
@@ -65,34 +52,52 @@ public class BookingCreatedConsumer : BackgroundService
 
             var jsonMessage = Encoding.UTF8.GetString(body);
 
-            var bookingEvent =
-                JsonSerializer.Deserialize<BookingCreatedEvent>(
-                    jsonMessage);
+            var bookingEvent =JsonSerializer.Deserialize<BookingCreatedEvent>(jsonMessage);
 
             if (bookingEvent != null)
             {
                 await _emailService.SendEmailAsync(
                     bookingEvent.Email,
-                    "Booking Confirmed",
-                    $"Hello {bookingEvent.CustomerName}, your booking for {bookingEvent.EventName} is confirmed.");
+                    "Booking Confirmed 🎉",
+                    $@"
+                    <h2>Booking Confirmed</h2>
 
+                    <p>Hello {bookingEvent.CustomerName},</p>
+
+                    <p>Your booking has been successfully confirmed.</p>
+
+                    <ul>
+                        <li>
+                            <b>Booking ID:</b>
+                            {bookingEvent.BookingId}
+                        </li>
+
+                        <li>
+                            <b>Event:</b>
+                            {bookingEvent.EventName}
+                        </li>
+
+                        <li>
+                            <b>Amount:</b>
+                            ₹{bookingEvent.TotalAmount}
+                        </li>
+                    </ul>
+
+                    <p>Thank you for choosing us.</p>
+                    <p>Best regards,<br/>SmartBooking Team</p>");
+                    
                 var log = new NotificationLog
                 {
                     Recipient = bookingEvent.Email,
-
                     EventType = "BookingCreated",
-
                     Message = "Booking confirmation email sent",
-
                     Status = "Success",
-
                     SentAt = DateTime.UtcNow
                 };
 
                 await _logs.InsertOneAsync(log);
 
-                Console.WriteLine(
-                    $"Notification processed for {bookingEvent.Email}");
+                Console.WriteLine($"Notification processed for {bookingEvent.Email}");
             }
         };
 

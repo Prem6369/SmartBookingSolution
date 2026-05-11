@@ -6,6 +6,7 @@ using BookingService.Services.Cache.Interfaces;
 using BookingService.Services.Interfaces;
 using Contracts.Events;
 using Messaging.Interfaces;
+using Messaging.Kafka.Interfaces;
 
 namespace BookingService.Services;
 
@@ -14,11 +15,13 @@ public class BookingServiceManager : IBookingServiceManager
     private readonly IBookingRepository _repository;
     private readonly IRedisCacheService _redisCacheService;
     private readonly IRabbitMqPublisher _publisher;
-    public BookingServiceManager(IBookingRepository repository, IRedisCacheService redisCacheService, IRabbitMqPublisher publisher)
+    private readonly IKafkaProducer _kafkaProducer;
+    public BookingServiceManager(IBookingRepository repository, IRedisCacheService redisCacheService, IRabbitMqPublisher publisher, IKafkaProducer kafkaProducer)
     {
         _repository = repository;
         _redisCacheService = redisCacheService;
         _publisher = publisher;
+        _kafkaProducer = kafkaProducer;
     }
 
     public async Task<List<Booking>> GetAllAsync()
@@ -112,6 +115,7 @@ public class BookingServiceManager : IBookingServiceManager
         };
 
         await _publisher.PublishAsync(bookingCreatedEvent);
+        await _kafkaProducer.ProduceAsync("booking-events-topic", bookingCreatedEvent);
 
         return new BookingResponse
         {

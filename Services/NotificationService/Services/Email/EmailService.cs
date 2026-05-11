@@ -1,24 +1,46 @@
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MimeKit;
 using NotificationService.Services.Email.Interfaces;
+using NotificationService.Settings;
+using Microsoft.Extensions.Options;
 
 namespace NotificationService.Services.Email;
 
 public class EmailService : IEmailService
 {
-    public async Task SendEmailAsync(
-        string to,
-        string subject,
-        string body)
+    private readonly EmailSettings _emailSettings;
+
+    public EmailService(IOptions<EmailSettings> emailOptions)
     {
-        Console.WriteLine("========= EMAIL SENT =========");
+        _emailSettings = emailOptions.Value;
+    }
 
-        Console.WriteLine($"To: {to}");
+    public async Task SendEmailAsync(string to,string subject,string body)
+    {
+        var email = new MimeMessage();
 
-        Console.WriteLine($"Subject: {subject}");
+        email.From.Add(new MailboxAddress(_emailSettings.SenderName,_emailSettings.SenderEmail));
 
-        Console.WriteLine($"Body: {body}");
+        email.To.Add(MailboxAddress.Parse(to));
 
-        Console.WriteLine("==============================");
+        email.Subject = subject;
 
-        await Task.CompletedTask;
+        email.Body = new TextPart("html")
+        {
+            Text = body
+        };
+
+        using var smtp = new SmtpClient();
+
+        await smtp.ConnectAsync( _emailSettings.SmtpServer, _emailSettings.Port,SecureSocketOptions.StartTls);
+
+        await smtp.AuthenticateAsync(_emailSettings.Username,_emailSettings.Password);
+
+        await smtp.SendAsync(email);
+
+        await smtp.DisconnectAsync(true);
+
+        Console.WriteLine($"Email sent successfully to {to}");
     }
 }

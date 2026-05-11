@@ -5,12 +5,9 @@ using NotificationService.Settings;
 
 var builder = Host.CreateApplicationBuilder(args);
 
-builder.Services.Configure<RabbitMqSettings>(
-    builder.Configuration.GetSection("RabbitMqSettings"));
-
-builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDbSettings"));
-
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMqSettings"));
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddSingleton<IEmailService, EmailService>();
 
 builder.Services.AddHostedService<BookingCreatedConsumer>();

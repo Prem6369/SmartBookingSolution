@@ -6,6 +6,8 @@ using BookingService.Services.Cache.Interfaces;
 using BookingService.Services.Interfaces;
 using Messaging.Interfaces;
 using Messaging.RabbitMQ;
+using Messaging.Kafka;
+using Messaging.Kafka.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +27,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 
 builder.Services.AddScoped<IRedisCacheService,RedisCacheService>();
 builder.Services.AddScoped<IRabbitMqPublisher,RabbitMqPublisher>();
-
+builder.Services.AddSingleton<IKafkaProducer,KafkaProducer>();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();

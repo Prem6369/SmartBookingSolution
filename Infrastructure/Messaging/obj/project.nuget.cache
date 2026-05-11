@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6/AWhH4CtAA=",
+  "dgSpecHash": "0UCneIOhk80=",
   "success": true,
   "projectFilePath": "/Users/premkumark/source/netproject/SmartBookingSolution/Infrastructure/Messaging/Messaging.csproj",
   "expectedPackageFiles": [
+    "/Users/premkumark/.nuget/packages/confluent.kafka/2.14.0/confluent.kafka.2.14.0.nupkg.sha512",
+    "/Users/premkumark/.nuget/packages/librdkafka.redist/2.14.0/librdkafka.redist.2.14.0.nupkg.sha512",
     "/Users/premkumark/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.7/microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512",
     "/Users/premkumark/.nuget/packages/microsoft.extensions.options/10.0.7/microsoft.extensions.options.10.0.7.nupkg.sha512",
     "/Users/premkumark/.nuget/packages/microsoft.extensions.primitives/10.0.7/microsoft.extensions.primitives.10.0.7.nupkg.sha512",
