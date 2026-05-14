@@ -10,6 +10,7 @@
   <Folder Name="/Services/">
     <Project Path="Services/AnalyticsService/AnalyticsService.csproj" />
     <Project Path="Services/BookingService/BookingService.csproj" />
+    <Project Path="Services/CatalogService/CatalogService.csproj" />
     <Project Path="Services/NotificationService/NotificationService.csproj" />
   </Folder>
   <Project Path="ApiGateway/ApiGateway.csproj" />

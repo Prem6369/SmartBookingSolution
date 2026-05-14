@@ -32,3 +32,5 @@
 /Users/premkumark/source/netproject/SmartBookingSolution/ApiGateway/obj/Debug/net10.0/ApiGateway.pdb
 /Users/premkumark/source/netproject/SmartBookingSolution/ApiGateway/obj/Debug/net10.0/ApiGateway.genruntimeconfig.cache
 /Users/premkumark/source/netproject/SmartBookingSolution/ApiGateway/obj/Debug/net10.0/ref/ApiGateway.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/ApiGateway/bin/Debug/net10.0/System.IO.Hashing.dll
+/Users/premkumark/source/netproject/SmartBookingSolution/ApiGateway/bin/Debug/net10.0/Yarp.ReverseProxy.dll

@@ -23,11 +23,9 @@ public class RabbitMqPublisher : IRabbitMqPublisher
             HostName = _settings.HostName
         };
 
-        using var connection =
-            await factory.CreateConnectionAsync();
+        using var connection =await factory.CreateConnectionAsync();
 
-        using var channel =
-            await connection.CreateChannelAsync();
+        using var channel =await connection.CreateChannelAsync();
 
         await channel.QueueDeclareAsync(
             queue: _settings.QueueName,
@@ -36,19 +34,16 @@ public class RabbitMqPublisher : IRabbitMqPublisher
             autoDelete: false,
             arguments: null);
 
-        var jsonMessage =
-            JsonSerializer.Serialize(message);
+        var jsonMessage =JsonSerializer.Serialize(message);
 
-        var body =
-            Encoding.UTF8.GetBytes(jsonMessage);
+        var body =Encoding.UTF8.GetBytes(jsonMessage);
 
         await channel.BasicPublishAsync(
             exchange: string.Empty,
             routingKey: _settings.QueueName,
             body: body);
 
-        Console.WriteLine(
-            $"RabbitMQ Message Published: {jsonMessage}");
+        Console.WriteLine($"RabbitMQ Message Published: {jsonMessage}");
         await Task.CompletedTask;
     }
 }
